@@ -26,7 +26,7 @@ def process_folder(folder_path):
 
         # 예제에서는 4번째 열(인덱스 3)이 상태(status) 열이라고 가정
         # 문자열로 변환한 후 소문자로 비교
-        done_rows = df[df[3].astype(str).str.strip().str.lower() == "done"]
+        done_rows = df[df[5].astype(str).str.strip().str.lower() == "done"]
         if not done_rows.empty:
             all_done_entries = pd.concat(
                 [all_done_entries, done_rows], ignore_index=True
